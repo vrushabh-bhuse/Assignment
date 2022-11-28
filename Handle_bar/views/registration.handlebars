@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<html>
+    <body style="background-color:aqua;">
+{{> navbar}}
+ <div>
+    <div class="container p-5">
+
+        <h2 class="display-6 text-center">Registration Form</h2>
+
+        <form method="POST" action="/user/postData">
+            {{#if errMsg}}
+            <div class="alert alert-danger">{{errMsg}}</div>
+            {{/if}}
+
+            {{#if succsMsg}}
+            <div class="alert alert-success">{{succsMsg}}</div>
+            {{/if}}
+
+            <div class="form-floating mb-3">
+                <input type="text" name="fullname" class="form-control" id="floatingInput" placeholder="Name" required>
+                <label for="floatingInput">Full Name</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="email" name="emailId" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <label for="floatingInput">Email address</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                <label for="floatingPassword">Password</label>
+            </div>
+            
+
+            <div class="form-floating mb-3">
+                <input type="number" name="contactNum" class="form-control" id="floatingInput" placeholder="984472634" required>
+                <label for="floatingInput">Contact Number</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="text" name="cityName" class="form-control" id="floatingInput" placeholder="Mumbai" required>
+                <label for="floatingInput">City</label>
+              </div>
+            <div class="form-group mb-3">
+                <input type="submit" value="Sign Up" class="btn btn-success">
+            </div>
+
+        </form>
+        </div>
+    
+ </div>
+ <div style="padding-top:100px;">
+    {{> footer}}
+ </div>
+    </body>
+</html>
+
+

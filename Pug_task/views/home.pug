@@ -1,0 +1,620 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  // Bootstrap Icon
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css')
+  // Custom CSS
+  link(rel='stylesheet' href='./index.css')
+style.
+    * {
+    margin: 0;
+    padding: 0;
+    }
+    .bg-color {
+    background-color: whitesmoke;
+    }
+    .carousel-control-prev, .carousel-control-next {
+    width: 25px;
+    height: 60px;
+    top: 50%;
+    opacity: 1;
+    }
+    .carousel-caption {
+    top: 30%;
+    left: 5%;
+    }
+    .shop-now-btn {
+    clear: left;
+    }
+    .btn {
+    color: white;
+    }
+    .btn:hover {
+    color: white;
+    }
+    .sec-heading {
+    color: black;
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+    content: "-";
+    }
+    .col-black {
+    color: black;
+    }
+    .border-less {
+    border-radius: 0px;
+    border: transparent;
+    }
+    .border-sharp {
+    border-radius: 0px;
+    }
+    .footer .img {
+    background: url(./media/footer.jpg)no-repeat;
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+    background-position-y: center;
+    background-blend-mode: darken;
+    }
+    .bg-filter {
+    background: rgba(0, 0, 0, 0.5);
+    height: 20em;
+    width: 100%;
+    }
+    .bottom {
+    background-color: black;
+    height: 15rem;
+    width: 100%;
+    }
+    .time {
+    width: 60px;
+    height: 60px;
+    }
+  // Custom CSS
+  title BPK Shop
+main.mx-5
+  // Navigation Bar
+  header
+    nav.navbar.navbar-expand-sm.navbar-light.bg-color.fixed-top.mx-4.bg-color
+      a.navbar-brand(href='#')
+        img.ml-2(src='/static/logo.png' height='30px' alt='')
+      button.navbar-toggler.d-lg-none(type='button' data-toggle='collapse' data-target='#collapsibleNavId' aria-controls='collapsibleNavId' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #collapsibleNavId.collapse.navbar-collapse
+        ul.navbar-nav.m-auto.mt-2.mt-lg-0
+          li.nav-item.active.mx-4
+            small
+              a.nav-link.text-uppercase.text-primary(href='/') Home
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/aboutus') About us
+          li.navitem.mx-4
+            small
+              a.nav-link.text-uppercase(href='/gallary') Gallary
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/services') Services
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/contact_details') Contact details 
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/contact') Contact Us
+        ul.navbar-nav.ml-auto.mt-2.mt-lg-0
+          li.nav-item
+            a.nav-link.ml-2(href='#')
+              i.bi.bi-search
+          li
+            a.nav-link.ml-2(href='#')
+              i.bi.bi-cart2
+          li
+            a.nav-link.ml-2(href='#')
+              i.bi.bi-list
+  // Carousel
+  section#carouselExampleControls.carousel.slide(data-ride='carousel')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='/static/slider1.jpg' alt='First_slide')
+        .carousel-caption.d-none.d-md-block.text-left
+          h5.display-4.font-weight-bold.font-italic
+            | The World 
+            br
+            | Of Extreme Sports
+          p.font-weight-bold.font-italic
+            | SAVE 
+            span.badge.border-sharp.badge-primary 20%
+            |  ON ALL APPAREL
+          hr.w-25.float-left.bg-white
+          a.btn.btn-primary.border-sharp.btn-sm.float-left.shop-now-btn
+            | Shop Now 
+            span.bi.bi-arrow-right.mx-2
+      .carousel-item
+        img.d-block.w-100(src='/static/slider2.jpg' alt='Second_slide')
+        .carousel-caption.d-none.d-md-block
+          h5.display-4.font-weight-bold.text-left.font-italic
+            | The World 
+            br
+            | Of Extreme Sports
+          p.font-weight-bold.font-italic.text-left
+            | SAVE 
+            span.badge.border-sharp.badge-danger 20%
+            |  ON ALL APPAREL
+          hr.w-25.float-left.bg-white
+          button.btn.border-sharp.btn-danger.btn-sm.float-left.shop-now-btn
+            | Shop Now 
+            span.bi.bi-arrow-right.mx-2
+      .carousel-item
+        img.d-block.w-100(src='/static/slider3.jpg' alt='Third slide')
+        .carousel-caption.d-none.d-md-block
+          h5.display-4.font-weight-bold.text-left.font-italic
+            | The World 
+            br
+            | Of Extreme Sports
+          p.font-weight-bold.font-italic.text-left
+            | SAVE 
+            span.badge.border-sharp.badge-warning.text-white 20%
+            |  ON ALL APPAREL
+          hr.w-25.float-left.bg-white
+          a.btn.btn-warning.text-white.btn-sm.float-left.shop-now-btn.border-sharp
+            | Shop Now 
+            span.bi.bi-arrow-right.mx-2
+    a.carousel-control-prev.bg-primary(href='#carouselExampleControls' role='button' data-slide='prev')
+      i.bi.bi-arrow-left
+      span.sr-only Previous
+    a.carousel-control-next.bg-primary(href='#carouselExampleControls' role='button' data-slide='next')
+      i.bi.bi-arrow-right
+      span.sr-only Next
+  // Three Button
+  section.row.my-4
+    aside.col
+      button.btn.btn-primary.border-less.btn-block.text-uppercase
+        i.bi.bi-truck.mx-3
+        | free shipping
+        |                     world wide
+    aside.col
+      button.btn.btn-danger.border-less.btn-block.text-uppercase
+        i.bi.bi-cash-coin.mx-3
+        | 100% money
+        |                     back - 48 hours
+    aside.col
+      button.btn.btn-warning.border-less.btn-block.text-uppercase
+        i.bi.bi-question-circle-fill.mx-3
+        | 24/7 online customer support
+  // Featured Collection
+  section.featured-collections.mt-5
+    .text-center
+      p.text-uppercase.sec-heading.mb-0
+        b Featured Collections
+      img(src='/static/symbol.png' alt='')
+    nav(aria-label='breadcrumb')
+      ol.breadcrumb.justify-content-center.bg-color
+        small.breadcrumb-item.text-uppercase
+          a(href='# ') new arrival
+        small.breadcrumb-item.text-uppercase
+          a.col-black(href='#') clothing
+        small.breadcrumb-item.text-uppercase
+          a.col-black(href='#') hats
+        small.breadcrumb-item.text-uppercase
+          a.col-black(href='#') shoes
+        small.breadcrumb-item.text-uppercase
+          a.col-black(href='#') bags
+        small.breadcrumb-item.text-uppercase
+          a.col-black(href='#') accessories
+    // Featured Grid
+    aside.products.my-5
+      .row.my-3
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product1.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550.00
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product2.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product3.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product4.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product5.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product6.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product7.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550.00
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product8.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product9.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product10.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product11.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+        .col
+          .card.border-less.mb-4(style='width: 11.3rem;')
+            img.card-img-top(src='/static/product12.jpg' alt='Card image cap')
+            .card-body.text-center
+              h6.card-title Leatt Pro Jacket
+              p.card-text.text-danger $550
+    // Hot Deals
+    aside.card.border-less
+      .row
+        .col
+          img.card-img.border-less(src='/static/model1.jpg' alt='')
+        .col
+          .card-body
+            b.text-uppercase hot deals
+            h1.mt-4 Tulos Draey Skirts
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.font-italic.text-secondary (05 Reviews)
+            h3.text-danger.mt-3 $230.00
+            small.text-justify
+              | Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              | Laudantium aliquam mollitia voluptatum eius sint, nulla itaque, autem fuga a cumque
+              | quaerat, consequuntur perspiciatis molestias praesentium officia deleniti labore?
+              | Praesentium, accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              | Voluptates maiores totam nobis eos, ipsam praesentium hic repellendus deserunt aliquam
+              | facilis nam illo illum iusto sint atque quisquam ad, soluta dolores.
+            table
+              tr
+                td
+                  small.d-block.my-2.text-uppercase
+                    i.bi.bi-chevron-compact-right
+                    |  Colors
+                td
+                  br
+                  p.d-inline-block.ml-5.mr-2(style='width: 10px; height: 10px; background-color: red; border-radius: 50%;')
+                  p.d-inline-block.mx-2(style='width: 10px; height: 10px; background-color: green; border-radius: 50%;')
+                  p.d-inline-block.mx-2(style='width: 10px; height: 10px; background-color: purple; border-radius: 50%;')
+              tr
+                td
+                  small.d-block.my-2.text-uppercase
+                    i.bi.bi-chevron-compact-right
+                    |  Size
+                td
+                  .mx-5
+                    small.border.p-2.px-3 S
+                    small.border.p-2.px-3 M
+                    small.border.p-2.px-3 L
+                    small.border.p-2.px-3 XL
+            .my-4
+              .time.bg-primary.btn.border-sharp.d-inline-block
+                h6
+                  | 25 
+                  br
+                  small.text-light.font-italic Days
+              .time.bg-primary.btn.border-sharp.d-inline-block
+                h6
+                  | 14 
+                  br
+                  small.text-light.font-italic Days
+              .time.bg-primary.btn.border-sharp.d-inline-block
+                h6
+                  | 57 
+                  br
+                  small.text-light.font-italic Days
+              .time.bg-primary.btn.border-sharp.d-inline-block
+                h6
+                  | 43 
+                  br
+                  small.text-light.font-italic Days
+  // Instagram
+  section.instagram.my-5
+    .text-center
+      p.text-uppercase.sec-heading.mb-0
+        b Instagram
+      img(src='/static/symbol.png' alt='')
+    .row.my-5
+      .col.my-2
+        .card.border-less(style='width: 11rem;')
+          img(src='/static/instagram1.jpg' alt='Card image cap')
+      .col.my-2
+        .card.border-less(style='width: 11rem;')
+          img(src='/static/instagram2.jpg' alt='Card image cap')
+      .col.my-2
+        .card.border-less(style='width: 11rem;')
+          img(src='/static/instagram3.jpg' alt='Card image cap')
+      .col.my-2
+        .card.border-less(style='width: 11rem;')
+          img(src='/static/instagram4.jpg' alt='Card image cap')
+      .col.my-2
+        .card.border-less(style='width: 11rem;')
+          img(src='/static/instagram5.jpg' alt='Card image cap')
+      .col.my-2
+        .card.border-less(style='width: 11rem;')
+          img(src='/static/instagram6.jpg' alt='Card image cap')
+  // Top Rated section
+  section.row
+    aside.col
+      .card.border-less.mb-5
+        .card-body.text-center.pb-0
+          h6.card-title.text-uppercase best seller
+          hr
+        .media.m-2.ml-4
+          img.align-self-center.mr-3.border(src='/static/best1.jpg' alt='Generic placeholder image' width='120px')
+          .media-body.m-1
+            b.mt-0 Leatt Pro Jacket
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+            small.text-danger.d-block $99.00
+            .button.my-2
+              button.btn.btn-primary.btn-sm.border-sharp
+                i.bi.bi-cart2
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-arrow-clockwise
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-heart
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-eye-fill
+        .media.m-2.ml-4
+          img.align-self-center.mr-3.border(src='/static/best2.jpg' alt='Generic placeholder image' width='120px')
+          .media-body.m-1
+            b.mt-0 Leatt Pro Jacket
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+            small.text-danger.d-block $99.00
+            .button.my-2
+              button.btn.btn-primary.btn-sm.border-sharp
+                i.bi.bi-cart2
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-arrow-clockwise
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-heart
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-eye-fill
+        .media.m-4
+          img.align-self-center.mr-3.border(src='/static/best3.jpg' alt='Generic placeholder image' width='120px')
+          .media-body.m-1
+            b.mt-0 Leatt Pro Jacket
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+            small.text-danger.d-block $99.00
+            .button.my-2
+              button.btn.btn-primary.btn-sm.border-sharp
+                i.bi.bi-cart2
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-arrow-clockwise
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-heart
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-eye-fill
+    aside.col
+      .card.border-less.mb-5
+        .card-body.text-center.pb-0
+          h6.card-title.text-uppercase top rate
+          hr
+        .media.m-2.ml-4
+          img.align-self-center.mr-3.border(src='/static/top1.jpg' alt='Generic placeholder image' width='120px')
+          .media-body.m-1
+            b.mt-0 Leatt Pro Jacket
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+            small.text-danger.d-block $99.00
+            .button.my-2
+              button.btn.btn-primary.btn-sm.border-sharp
+                i.bi.bi-cart2
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-arrow-clockwise
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-heart
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-eye-fill
+        .media.m-2.ml-4
+          img.align-self-center.mr-3.border(src='/static/top2.jpg' alt='Generic placeholder image' width='120px')
+          .media-body.m-1
+            b.mt-0 Leatt Pro Jacket
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+            small.text-danger.d-block $99.00
+            .button.my-2
+              button.btn.btn-primary.btn-sm.border-sharp
+                i.bi.bi-cart2
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-arrow-clockwise
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-heart
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-eye-fill
+        .media.m-4
+          img.align-self-center.mr-3.border(src='/static/top3.jpg' alt='Generic placeholder image' width='120px')
+          .media-body.m-1
+            b.mt-0 Leatt Pro Jacket
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+            small.text-danger.d-block $99.00
+            .button.my-2
+              button.btn.btn-primary.btn-sm.border-sharp
+                i.bi.bi-cart2
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-arrow-clockwise
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-heart
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-eye-fill
+    aside.col
+      .card.border-less.mb-5
+        .card-body.text-center.pb-0
+          h6.card-title.text-uppercase top special
+          hr
+        .media.m-2.ml-4
+          img.align-self-center.mr-3.border(src='/static/special1.jpg' alt='Generic placeholder image' width='120px')
+          .media-body.m-1
+            b.mt-0 Leatt Pro Jacket
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+            small.text-danger.d-block $99.00
+            .button.my-2
+              button.btn.btn-primary.btn-sm.border-sharp
+                i.bi.bi-cart2
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-arrow-clockwise
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-heart
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-eye-fill
+        .media.m-2.ml-4
+          img.align-self-center.mr-3.border(src='/static/special2.jpg' alt='Generic placeholder image' width='120px')
+          .media-body.m-1
+            b.mt-0 Leatt Pro Jacket
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+            small.text-danger.d-block $99.00
+            .button.my-2
+              button.btn.btn-primary.btn-sm.border-sharp
+                i.bi.bi-cart2
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-arrow-clockwise
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-heart
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-eye-fill
+        .media.m-4
+          img.align-self-center.mr-3.border(src='/static/special3.jpg' alt='Generic placeholder image' width='120px')
+          .media-body.m-1
+            b.mt-0 Leatt Pro Jacket
+            .stars
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+              small.bi.bi-star-fill.text-warning
+            small.text-danger.d-block $99.00
+            .button.my-2
+              button.btn.btn-primary.btn-sm.border-sharp
+                i.bi.bi-cart2
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-arrow-clockwise
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-heart
+              button.btn.btn-outline-secondary.btn-sm.border-sharp.text-secondary
+                i.bi.bi-eye-fill
+  // Footer
+  section.footer.text-center
+    aside.img
+      .bg-filter.text-light
+        .container
+          img.rounded-circle.m-4(src='/static/download.png' width='70px' height='70px' alt='')
+          blockquote.mx-5.font-italic
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis praesentium quo
+            | suscipit, dolorem provident cupiditate quod! Error temporibus saepe rem corporis vel in esse
+            | sapiente perferendis enim, deleniti, facere laudantium.
+          b Vrushabh Bhuse
+          br
+          small.font-italic Web Designer
+    aside.mx-auto.row(role='group' aria-label='First group')
+      button.btn.btn-primary.border-less.text-uppercase.col(type='button')
+        i.bi.bi-facebook.px-3
+        | facebook
+      button.btn.btn-success.border-less.text-uppercase.col(type='button')
+        i.bi.bi-twitter.px-3
+        | twitter
+      button.btn.btn-danger.border-less.text-uppercase.col(type='button')
+        i.bi.bi-instagram.px-3
+        | Instagram
+      button.btn.btn-info.border-less.text-uppercase.col(type='button')
+        i.bi.bi-linkedin.px-3
+        | linkedin
+      button.btn.btn-secondary.border-less.text-uppercase.col(type='button')
+        i.bi.bi-github.px-3
+        | github
+    aside.bottom
+      .container
+        img.m-4(src='/static/logo1.png' width='100px' height='' alt='')
+        p.mx-5.mb-5.font-italic.text-secondary
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis praesentium quo suscipit,
+          | dolorem provident 
+          br
+          |  cupiditate quod! Error temporibus saepe rem corporis 
+          br
+          img.my-3(src='/static/payment.png' width='200px' alt='')
+    footer.my-3
+      small
+        | Copyright &copy;2021 Designed by 
+        span.text-primary Vrushabh Bhuse
+        |  - All Rights
+        |                     Reserved.
+// Optional JavaScript
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

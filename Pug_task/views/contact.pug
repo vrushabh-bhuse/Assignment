@@ -1,0 +1,205 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  // Bootstrap Icon
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css')
+  // Custom CSS
+  link(rel='stylesheet' href='./contact.css')
+  style.
+    * {
+    margin: 0;
+    padding: 0;
+    background-colour: white;
+    }
+    .bg-color {
+    background-color: whitesmoke;
+    }
+    .carousel-control-prev, .carousel-control-next {
+    width: 25px;
+    height: 60px;
+    top: 50%;
+    opacity: 1;
+    }
+    .carousel-caption {
+    top: 30%;
+    left: 5%;
+    }
+    .shop-now-btn {
+    clear: left;
+    }
+    .btn {
+    color: white;
+    }
+    .btn:hover {
+    color: white;
+    }
+    .sec-heading {
+    color: black;
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+    content: "-";
+    }
+    .col-black {
+    color: black;
+    }
+    .border-less {
+    border-radius: 0px;
+    border: transparent;
+    }
+    .border-sharp {
+    border-radius: 0px;
+    }
+    .footer .img {
+    background: url(./media/footer.jpg)no-repeat;
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+    background-position-y: center;
+    background-blend-mode: darken;
+    }
+    .bg-filter {
+    background: rgba(0, 0, 0, 0.5);
+    height: 20em;
+    width: 100%;
+    }
+    .bottom {
+    background-color: black;
+    height: 15rem;
+    width: 100%;
+    }
+    .time {
+    width: 60px;
+    height: 60px;
+    }
+  title BPK Shop
+main.mx-5
+  // Navigation Bar
+  header
+    nav.navbar.navbar-expand-sm.navbar-light.bg-color.fixed-top.mx-4.bg-color
+      a.navbar-brand(href='#')
+        img.ml-2(src='media/logo.png' height='30px' alt='')
+      button.navbar-toggler.d-lg-none(type='button' data-toggle='collapse' data-target='#collapsibleNavId' aria-controls='collapsibleNavId' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #collapsibleNavId.collapse.navbar-collapse
+        ul.navbar-nav.m-auto.mt-2.mt-lg-0
+          li.nav-item.active.mx-4
+            small
+              a.nav-link.text-uppercase.text-primary(href='/') Home
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/aboutus') About us
+          li.navitem.mx-4
+            small
+              a.nav-link.text-uppercase(href='/gallary') Gallary
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/service') Service
+          li.nav-item.mx-4
+  // Carousel
+  section#carouselExampleControls.carousel.slide(data-ride='carousel')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='media/slider1.jpg' alt='First slide')
+        .carousel-caption.d-none.d-md-block.text-left
+          h5.display-4.font-weight-bold.font-italic
+            | The World 
+            br
+            | Of Extreme Sports
+          p.font-weight-bold.font-italic
+            | SAVE 
+            span.badge.border-sharp.badge-primary 20%
+            |  ON ALL APPAREL
+          hr.w-25.float-left.bg-white
+          a.btn.btn-primary.border-sharp.btn-sm.float-left.shop-now-btn
+            | Shop Now 
+            span.bi.bi-arrow-right.mx-2
+      .carousel-item
+        img.d-block.w-100(src='media/slider2.jpg' alt='Second slide')
+        .carousel-caption.d-none.d-md-block
+          h5.display-4.font-weight-bold.text-left.font-italic
+            | The World 
+            br
+            | Of Extreme Sports
+          p.font-weight-bold.font-italic.text-left
+            | SAVE 
+            span.badge.border-sharp.badge-danger 20%
+            |  ON ALL APPAREL
+          hr.w-25.float-left.bg-white
+          button.btn.border-sharp.btn-danger.btn-sm.float-left.shop-now-btn
+            | Shop Now 
+            span.bi.bi-arrow-right.mx-2
+      .carousel-item
+        img.d-block.w-100(src='media/slider3.jpg' alt='Third slide')
+        .carousel-caption.d-none.d-md-block
+          h5.display-4.font-weight-bold.text-left.font-italic
+            | The World 
+            br
+            | Of Extreme Sports
+          p.font-weight-bold.font-italic.text-left
+            | SAVE 
+            span.badge.border-sharp.badge-warning.text-white 20%
+            |  ON ALL APPAREL
+          hr.w-25.float-left.bg-white
+          a.btn.btn-warning.text-white.btn-sm.float-left.shop-now-btn.border-sharp
+            | Shop Now 
+            span.bi.bi-arrow-right.mx-2
+    //
+      <a class="carousel-control-prev bg-primary" href="#carouselExampleControls" role="button" data-slide="prev">
+      <i class="bi bi-arrow-left"></i>
+      <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next bg-primary" href="#carouselExampleControls" role="button" data-slide="next">
+      <i class="bi bi-arrow-right"></i>
+      <span class="sr-only">Next</span>
+      </a>
+  // Form
+  section.border.my-5
+    form(method='POST' action='/contactdata' ).container.p-5
+      h1.mb-5.text-secondary Contact Us
+      .form-row
+        .form-group.col-md-6
+          label(for='inputEmail4') First Name
+          input#fname.form-control.border-sharp(type='text' name='fname' placeholder='First Name')
+        .form-group.col-md-6
+          label(for='inputPassword4') Last Name
+          input#lname.form-control.border-sharp(type='text' name='lname' placeholder='Last Name')
+      .form-group
+        label(for='inputAddress') Email
+        input#email.form-control.border-sharp(type='email' name='email' placeholder='Email Address')
+      .form-group
+        label(for='inputAddress2') Phone Number
+        input#mobile.form-control.border-sharp(type='phone' name='phone' placeholder='Mobile Number')
+      .form-group
+        label(for='exampleFormControlTextarea1') Message
+        textarea#message.form-control.border-sharp(rows='3')
+      #error.alert.alert-danger.text-center.border-sharp(style='display: none;' role='alert')
+      #success.alert.alert-success.text-center(style='display: none;' role='alert')
+      input#submit.btn.btn-success.border-sharp(type='submit' value="Submit" onclick='validate()')
+  // Footer
+  section.footer.text-center
+   
+    aside.bottom
+      .container
+        img.m-4(src='media/logo1.png' width='100px' height='' alt='')
+        p.mx-5.mb-5.font-italic.text-secondary
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis praesentium quo suscipit,
+          | dolorem provident 
+          br
+          |  cupiditate quod! Error temporibus saepe rem corporis 
+          br
+          img.my-3(src='media/payment.png' width='200px' alt='')
+    footer.my-3
+      small
+        | Copyright &copy;2021 Designed by 
+        span.text-primary Vrushabh Bhuse
+        |  - All Rights
+        |                     Reserved.
+// Optional JavaScript
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

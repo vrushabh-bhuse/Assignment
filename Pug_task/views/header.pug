@@ -1,0 +1,74 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  // Bootstrap Icon
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css')
+  // Custom CSS
+  link(rel='stylesheet' href='./index.css')
+style.
+    * {
+    margin: 0;
+    padding: 0;
+    }
+    .bg-color {
+    background-color: whitesmoke;
+    }
+    .bg-filter {
+    background: rgba(0, 0, 0, 0.5);
+    height: 20em;
+    width: 100%;
+    }
+    .bottom {
+    background-color: black;
+    height: 15rem;
+    width: 100%;
+    }
+    .time {
+    width: 60px;
+    height: 60px;
+    }
+    
+  // Custom CSS
+  title BPK Shop
+main.mx-5
+  // Navigation Bar
+  header
+    nav.navbar.navbar-expand-sm.navbar-light.bg-color.fixed-top.mx-4.bg-color
+      a.navbar-brand(href='#')
+        img.ml-2(src='/static/logo.png' height='30px' alt='')
+      button.navbar-toggler.d-lg-none(type='button' data-toggle='collapse' data-target='#collapsibleNavId' aria-controls='collapsibleNavId' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #collapsibleNavId.collapse.navbar-collapse
+        ul.navbar-nav.m-auto.mt-2.mt-lg-0
+          li.nav-item.active.mx-4
+            small
+              a.nav-link.text-uppercase.text-primary(href='/') Home
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/aboutus') About us
+          li.navitem.mx-4
+            small
+              a.nav-link.text-uppercase(href='/gallary') Gallary
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/services') Services
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/contact_details') Contact details 
+          li.nav-item.mx-4
+            small
+              a.nav-link.text-uppercase(href='/contact') Contact Us
+        ul.navbar-nav.ml-auto.mt-2.mt-lg-0
+          li.nav-item
+            a.nav-link.ml-2(href='#')
+              i.bi.bi-search
+          li
+            a.nav-link.ml-2(href='#')
+              i.bi.bi-cart2
+          li
+            a.nav-link.ml-2(href='#')
+              i.bi.bi-list
