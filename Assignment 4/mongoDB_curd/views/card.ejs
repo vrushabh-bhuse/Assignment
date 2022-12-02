@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body style="background-image: url('https://image.shutterstock.com/image-vector/cartoon-hand-drawn-shoes-seamless-260nw-682624165.jpg');">
+  <%- include('./partials/header') %>
+
+  <!-- card page for reading all the products and mapping them -->
+  <div class="d-flex flex-wrap ">
+    <% productData.forEach(function(data) { %>
+      <div class="card mr-1" style="width: 18rem">
+        <img src="<%=data.imgUrl%>" class="card-img-top img-fluid" alt="dummmy image" />
+        <div class="card-body">
+          <h3 class="card-title">
+            <%=data.name%>
+          </h3>
+          <h6>Price: <%=data.price%>
+          </h6>
+          <h6>Quantity: <%=data.quantity%>
+          </h6>
+          <p class="card-text">
+            <%=data.description%>
+          </p>
+          <div class="d-flex justify-content-between">
+            <form action="/deleteproduct/<%=data._id%>" method="post">
+              <button type="submit" class="btn btn-danger">delete</button>
+            </form>
+            <!-- <a href="/deleteproduct/<%=data._id%>" type="submit"> delete</a> -->
+            <form action="/updateForm/<%=data._id%>" method="post">
+              <a href="/updateForm/<%=data._id%>" type="submit" class="btn btn-primary">update</a>
+            </form>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+  </div>
+
+  <%- include('./partials/footer') %>
+</body>
+</html>
+
+
+
